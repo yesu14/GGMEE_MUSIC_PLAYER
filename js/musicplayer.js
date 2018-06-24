@@ -21,25 +21,30 @@ function play(audioId, type) {
     // 判断是否点击列表，点击时播放点击的歌曲，未点击时播放第一首歌曲
     // 判断src是否为空
     if (audioSrc == null || audioSrc == undefined || audioSrc == "") {
-        var song1Src = $("#song1").attr("src");
+        var song1Src = $("#song0").attr("src");
         play.attr("src", song1Src);
         // 获取a标签的文本
-        var title = $("#a1").text();
+        var title = $("#a0").text();
         // 赋值songName
         $("#songName").text(title);
 
     } else {
+        // #song0
+        var aTagId = "#a"+ audioId.substr(5,audioId.length);
+
+        // 获取a标签的文本
+        var title = $(aTagId).text();
+        // 赋值songName
+        $("#songName").text(title);
         play.attr('src', audioSrc);
     }
     // src为空时赋值song1的src
 
     // 设置play的src属性的值
     // 控制台输出play的src的值
-    console.log("src==" + play.attr('src'));
     // jquery对象转换成js对象
     play = $("#song11")[0];
     // 控制台输出status
-    console.log('status--' + status);
     // status为暂停按钮显示与否
     // 暂停按钮没有显示时 if为播放，else为暂停
     if (status == 'none' || type == 1) {
@@ -58,6 +63,51 @@ function play(audioId, type) {
 
 }
 
+/**
+ * @author: Quan
+ * @Description: 获取歌曲列表
+ * @param :null
+ * @return:
+ * @date: 2018/6/24 22:09
+ */
+function getMusicList() {
+
+    $.ajax({
+        type: 'POST',
+        url: 'json/music_list.json',
+        data: {},
+        async:false,
+        success: function (data) {
+            var list = "";
+            // data不等于空时
+            if(data!=null &&data!=undefined&&data!=""){
+                // 循环获取歌曲
+                for(var i=0;i<data.musiclist.length;i++){
+                    // 作者
+                    var author = data.musiclist[i].author;
+                    // 歌曲名
+                    var title = data.musiclist[i].title;
+                    // 歌曲地址
+                    var src = data.musiclist[i].src;
+
+                    list += " <li  class=\"list-group-item\">\n" +
+                        "         <audio id=\"song"+i+"\" src=\""+src+"\" ></audio>\n" +
+                        "         <a id=\"a"+i+"\" title=\""+title+"\" class=\"artist\" onclick='play(\"#song"+i+"\",1)'>"+title+"-"+author+"</a>\n" +
+                        "  </li>";
+
+                }
+                $(".list-group").html(list);
+            }
+
+        },
+        error: function () {
+
+        }
+    });
+
+}
+
+// 页面加载时执行
 $(document).ready(function () {
     $(".previous").click(function () {
 
@@ -71,20 +121,10 @@ $(document).ready(function () {
     $(".next").click(function () {
 
     });
-    $(".artist").click(function () {
-        var strId = $(this).attr('id');
-        console.log(strId);
-        var audioId = strId.substr(1, strId.length);
-        audioId = "#song" + audioId;
-        //title为获取的列表中的歌曲名称
-        var title = $(this).text();
-        console.log("title===========" + title);
-        // 用.text()方法赋值文字的值
-        $("#songName").text(title);
-        play(audioId, 1);
 
+    // 获取歌曲列表
+    getMusicList();
 
-    })
 });
 
 

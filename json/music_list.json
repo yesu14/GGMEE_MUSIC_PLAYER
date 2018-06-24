@@ -1,24 +1,33 @@
 {
   "status_code": "1",
   "total": 3,
-  "rows": [
+  "musiclist": [
     {
       "pkid": 1,
-      "author": "作者1",
-      "title": "歌曲名1",
-      "src": "歌曲1-作者1.mp3"
-    },
-    {
-      "pkid": 2,
-      "author": "作者2",
-      "title": "歌曲名2",
-      "src": "歌曲名2-作者2.mp3"
-    },
-    {
-      "pkid": 3,
-      "author": "作者3",
-      "title": "歌曲名3",
-      "src": "歌曲名3-作者3.mp3"
+      "author": "大壮",
+      "title": "我们不一样",
+      "src": "mp3/大壮 - 我们不一样.mp3",
+      "lrc":"歌词1"
+    }, {
+      "pkid": 1,
+      "author": "岑宁儿",
+      "title": "追光者",
+      "src": "mp3/岑宁儿 - 追光者.mp3",
+      "lrc":"歌词2"
+    }, {
+      "pkid": 1,
+      "author": "李玉刚",
+      "title": "刚好遇见你",
+      "src": "mp3/李玉刚 - 刚好遇见你.mp3",
+      "lrc":"歌词3"
+    }, {
+      "pkid": 1,
+      "author": "毛不易",
+      "title": "消愁",
+      "src": "mp3/毛不易 - 消愁.mp3",
+      "lrc":"歌词3"
     }
+
   ]
+
 }
