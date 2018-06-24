@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>music </title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.css"  >
+    <link rel="stylesheet" type="text/css" href="css/musicplayer.css">
+
+
+</head>
+
+<body>
+
+<div class="global">
+    <!--<a href="baidu.com" class="hello">hello</a>-->
+    <!--左侧-->
+    <div>
+        <!--控制区-->
+        <div class="btnArea">
+            <!--专辑图片-->
+            <img src="" alt="歌曲1-歌手1">
+            <!--歌名、歌手-->
+            <a id="songName"></a>
+            <!--上一曲，播放，下一曲-->
+            <div class="btn">
+                <!--<i class="previous"></i>-->
+                <a href="javascript:;" class="previous" title="上一曲" >上一曲</a>
+                <a href="javascript:void(0)" class="play"  id="play" title="播放" style="display: inline-block;">播放</a>
+                <a href="javascript:void(0)" class="pause" id="pause" title="暂停" style="display: none;" >暂停</a>
+
+                <a href="javascript:void(0)" class="next" title="下一曲">下一曲</a>
+            </div>
+            <div class="volume">
+                <a href="javascript:void(0)" class="mute" title="静音">静音</a>
+                <a href="javascript:void(0)" class="unmute" title="开启声音">开启声音</a>
+
+            </div>
+        </div>
+        <!--歌曲目录-->
+        <div class="listArea">
+            <!--歌曲名，歌手-->
+            <ul class="list-group">
+                <li  class="list-group-item ">
+                    <!--<a  target="_blank" title="九张机" class="artist">叶炫清</a>-->
+                    <audio id="song1" src="mp3/叶炫清 - 九张机.mp3"  >九张机</audio>
+
+                    <a id="a1" title="九张机" class="artist">
+
+                        九张机-叶炫清</a>
+
+                </li>
+                <li  class="list-group-item">
+                    <audio id="song2" src="mp3/大壮 - 我们不一样.mp3" >我们不一样</audio>
+                    <a id="a2" target="_blank" title="大壮" class="artist">我们不一样-大壮</a>
+                </li>
+                <li  class="list-group-item">
+                    <audio id="song3" src="mp3/岑宁儿 - 追光者.mp3" >追光者</audio>
+                    <a id="a3" target="_blank" title="岑宁儿" class="artist">追光者-岑宁儿</a>
+                </li>
+
+                <li  class="list-group-item">
+                    <audio id="song4" src="mp3/Dragon Pig - 全部都是你.mp3" >全部都是你</audio>
+                    <a id="a4" target="_blank" title="Dragon Pig" class="artist">全部都是你-Dragon Pig</a>
+                </li>
+                <li  class="list-group-item">
+                    <audio id="song5" src="mp3/李玉刚 - 刚好遇见你.mp3" >刚好遇见你</audio>
+                    <a id="a5" target="_blank" title="李玉刚" class="artist">刚好遇见你-李玉刚</a>
+                </li>
+                <li  class="list-group-item">
+                    <audio id="song6" src="mp3/毛不易 - 消愁.mp3" >消愁</audio>
+                    <a id="a6" target="_blank" title="毛不易" class="artist">消愁-毛不易</a>
+                </li>
+                <li  class="list-group-item">
+                    <audio id="song7" src="mp3/薛之谦 - 演员.mp3" >演员</audio>
+                    <a id="a7" target="_blank" title="薛之谦" class="artist">演员-薛之谦</a>
+                </li>
+                <li  class="list-group-item">
+                    <audio  id="song8" src="mp3/薛之谦 - 那是你离开了北京的生活.mp3" >那是你离开了北京的生活</audio>
+                    <a id="a8" target="_blank" title="薛之谦" class="artist">那是你离开了北京的生活-薛之谦</a>
+                </li>
+                <li  class="list-group-item">
+                    <audio id="song9" src="mp3/许嵩 - 大千世界.mp3" >大千世界</audio>
+                    <a id="a9" target="_blank" title="许嵩" class="artist">大千世界-许嵩</a>
+                </li>
+                <li  class="list-group-item">
+                    <audio id="song10" src="mp3/金志文 - 远走高飞.mp3" >远走高飞</audio>
+                    <audio id="song11" src=""></audio>
+                    <a id="a10" target="_blank" title="金志文" class="artist">远走高飞-金志文</a>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+    <!--歌词-->
+    <!--<div class="slimScroll">-->
+    <div class="lyricArea">
+        <div >
+            <p class="muted">九张机 (王者荣耀版) - 零柒
+            </p>
+            <p class="muted">词：任宇翔
+            </p>
+            <p class="muted">曲：周琦
+            </p>
+            <p class="muted">迷雾如我
+            </p>
+            <p class="muted">一念子龙一念痴
+            </p>
+            <p class="muted">峡谷斗转
+            </p>
+            <p class="muted">心系于你犹不知
+            </p>
+            <p class="muted">才不管 坦克战士
+            </p>
+            <p class="muted">变成了往事
+            </p>
+            <p class="muted">你前排 而僵持
+            </p>
+            <p class="muted">三长两短
+            </p>
+            <p class="muted">送你人头愿你知
+            </p>
+            <p class="muted">击飞突刺
+            </p>
+            <p class="muted">收割残血又一次
+            </p>
+            <p class="muted">还记得 团战之时
+            </p>
+            <p class="muted">我担当法师
+            </p>
+            <p class="muted">让对面难克制
+            </p>
+            <p class="muted">我们埋伏 敌人不察
+            </p>
+            <p class="muted">敌军皆死尸
+            </p>
+            <p class="muted">熟练操作 加王者意志
+            </p>
+            <p class="muted">你我双排 全力以赴
+            </p>
+            <p class="muted">愿为你赴死
+            </p>
+            <p class="muted">守护你永不变
+            </p>
+            <p class="muted">生生世世
+            </p>
+
+        </div>
+
+    </div>
+    <!--</div>-->
+
+</div>
+<script src="bootstrap/dist/js/jquery.min.js"></script>
+<script src="js/musicplayer.js"></script>
+<script src="bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.global {
+
+}
+
+/*控制区 410*150*/
+.btnArea {
+    width: 410px;
+    height: 150px;
+    background-color: aquamarine;
+
+}
+.volume .mute {
+    display: inline-block;
+    width: 21px;
+    height: 20px;
+    background: url(../img/ggmee-music_player.png) 0 -100px no-repeat;
+    font-size: 0;
+}
+.volume .unmute {
+    display: inline-block;
+    width: 21px;
+    height: 20px;
+    background: url(../img/ggmee-music_player.png) -100px -100px no-repeat;
+    font-size: 0;
+}
+.btn{
+display:block;
+}
+
+.btn .previous:hover {
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+    background: url(../img/ggmee-music_player.png) -250px -50px no-repeat;
+    font-size: 0;
+}
+.btn .previous {
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+    background: url(../img/ggmee-music_player.png) -200px -50px no-repeat;
+    font-size: 0;
+}
+.btn .play:hover {
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    background: url(../img/ggmee-music_player.png) -50px -50px no-repeat;
+    font-size: 0;
+}
+.btn .play:active {
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    background: url(../img/ggmee-music_player.png) -100px -50px no-repeat;
+    font-size: 0;
+}
+
+.btn .play {
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    background: url(../img/ggmee-music_player.png) 0 -50px no-repeat;
+    font-size: 0;
+}
+.btn .pause:hover {
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    background: url(../img/ggmee-music_player.png) -150px -50px no-repeat;
+    font-size: 0;
+}
+.btn .pause {
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    background: url(../img/ggmee-music_player.png) -100px -50px no-repeat;
+    font-size: 0;
+}
+.btn .next:hover {
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+    background: url(../img/ggmee-music_player.png) -350px -50px no-repeat;
+    font-size: 0;
+}
+.btn .next {
+     width: 34px;
+     height: 34px;
+     display: inline-block;
+     background: url(../img/ggmee-music_player.png) -300px -50px no-repeat;
+     font-size: 0;
+ }
+
+/*歌曲目录 410*625*/
+.listArea {
+    width: 410px;
+    /*height: 625px;*/
+    height: auto;
+}
+
+/*歌曲名*/
+.artist {
+    color: #0b0ab7;
+    width: 100px;
+    left: 249px
+}
+/*列表样式*/
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+    z-index: 2;
+    color: #fff;
+    background-color: #a4a6b7;
+    border-color: #a4a6b7;
+}
+
+/*歌词 569*2010 */
+/*滚动条*/
+.slimScroll {
+    border: 1px solid black;
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    height: 100px;
+
+}
+
+.lyricArea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 410px;
+}
