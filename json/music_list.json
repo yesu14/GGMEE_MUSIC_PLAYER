@@ -1,0 +1,24 @@
+{
+  "status_code": "1",
+  "total": 3,
+  "rows": [
+    {
+      "pkid": 1,
+      "author": "作者1",
+      "title": "歌曲名1",
+      "src": "歌曲1-作者1.mp3"
+    },
+    {
+      "pkid": 2,
+      "author": "作者2",
+      "title": "歌曲名2",
+      "src": "歌曲名2-作者2.mp3"
+    },
+    {
+      "pkid": 3,
+      "author": "作者3",
+      "title": "歌曲名3",
+      "src": "歌曲名3-作者3.mp3"
+    }
+  ]
+}
