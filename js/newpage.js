@@ -18,15 +18,17 @@ function makeUserName() {
 function postRec() {
     $.ajax({
         type: 'POST',
-        url: url,
+        url: '../input.html',
         data: data,
-        success: success,
-        dataType: dataType
+        success: function (data) {
+            console.log(data);
+        }
     });
 }
 $(function() {
-    var s = Request("name");
-    console.log(s);
-    return;
-    makeUserName();
+    // https://zhidao.baidu.com/question/1608819698616680987.html
+    postRec();
+    // console.log(s);
+    // return;
+    // makeUserName();
 });
