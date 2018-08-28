@@ -1,0 +1,25 @@
+table{
+    border-collapse: collapse;
+    width: 400px;
+}
+.box1{
+    width: 400px;
+    display: table;
+    vertical-align: top;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+.box2{
+    display: table-row;
+
+    padding: 10px;
+}
+.box2>div{
+    display: table-cell;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+
+}
+table > td{
+    border: 1px solid black;
+}

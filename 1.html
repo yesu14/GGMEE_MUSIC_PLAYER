@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+<div>
+    <label>用户名：</label><input type="text" id="username">
+    <br>
+    <label>密码：</label><input type="password" id="password">
+    <br>
+    <label>下次自动登录：</label><input type="checkbox" id="autologin">
+    <br>
+    <button onclick="login()">登录</button>
+</div>
+<script src="js/jquery.min.js"></script>
+<script>
+
+    $(function () {
+        console.log('页面加载时');
+        var a = getCookie();
+        console.log(a);
+       if(getCookie()){
+           window.location.href = "2.html";
+       }
+    });
+    
+    function login() {
+        var username = $('#username').val();//获取用户名
+        var password = $('#password').val();//获取密码
+        var checkbox = $('#autologin').prop('checked') ? 1 : 0;//获取自动登录值
+
+        // alert('checkbox='+checkbox);
+        //判断用户名是否为空
+        if (username == null || username.length < 1) {
+            alert('用户名不能为空！');
+            return;
+        }
+        //判断密码是否为空
+        if (password == null || password.length < 1) {
+            alert('密码不能为空！');
+            return;
+        }
+        // 自动登录时写入cookie
+        if (checkbox == 1) {
+
+            setCookie("username",username);
+            // document.cookie = "username=" + username;
+        }
+        window.location.href = "2.html";
+    }
+
+    //设置cookie时间
+    function setCookie(name,value)
+    {
+        var exp = new Date();
+        exp.setTime(exp.getTime() + 10*1000);
+        document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+    }
+
+    function getCookie(name) {
+        name = "username";
+        var cookie = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+        console.log('cookie='+cookie);
+        if (cookie != null && cookie.length > 0) {
+            console.log('用户名=' + unescape(cookie[2]));
+            return unescape(cookie[2]);
+        }
+        return null;
+    }
+</script>
+</body>
+</html>
